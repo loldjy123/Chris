@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Girlfriend?</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: url('5AFDB337-05CA-46E8-BD15-95E76FFF0F8E.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    .container {
+      position: relative;
+      top: 20vh;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 50px;
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #ff69b4;
+      border: none;
+      color: white;
+      padding: 20px 40px;
+      font-size: 1.5em;
+      border-radius: 10px;
+      margin: 15px;
+      cursor: pointer;
+    }
+
+    .message {
+      opacity: 0;
+      margin-top: 30px;
+      font-size: 1.5em;
+      line-height: 1.8;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .message.show {
+      opacity: 1;
+    }
+
+    .heart {
+      position: fixed;
+      width: 25px;
+      height: 25px;
+      background: red;
+      clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Will you be my girlfriend?<br>Until I make you my wife.</h1>
+    <button class="btn" onclick="showLove()">Yes</button>
+    <button class="btn" onclick="showLove()">!No</button>
+
+    <div class="message" id="message">
+      <p>Thank you for accepting to be my girlfriend, mi corazón. You've just made me the happiest person alive.</p>
+      <p>Before I met you, my world felt like it was in dark mode. But ever since we started talking, you brought color and light into it.</p>
+      <p>You've changed me in the most beautiful ways. You make me feel loved, valued, and understood. I know I can trust you with my whole heart.</p>
+      <p>I know this is not the most romantic way to ask to be my girlfriend, but I know</p>
+      <p><code>if (God.presence == true) {
+  System.out.print("We will have a healthy relationship");
+}</code></p>
+      <p>You're not just my girlfriend. You're the blessing I prayed for, and I will do everything to have you by my side forever.</p>
+      <p><code>System.out.println("I promise");</code></p>
+      <p><code>while (breathing == true) {
+  System.out.println("I will love you deeply, cherish you, and honor you with everything I have.");
+  System.out.println("Every day, I’ll try my best to make you the happiest girl on Earth.");
+}</code></p>
+      <p><code>System.out.println("te quiero mucho mami") ❤️</code></p>
+      <p><code>System.exit();</code></p>
+    </div>
+  </div>
+
+  <script>
+    function showLove() {
+      const message = document.getElementById("message");
+      message.classList.add("show");
+      for (let i = 0; i < 100; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+    }
+  </script>
+
+</body>
+</html>
